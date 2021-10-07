@@ -1,0 +1,26 @@
+#!/bin/bash
+
+###########
+# configs # 
+###########
+
+WORK_DURATION=25                 # <minutes> pomodoro duration
+SHORT_DURATION=5                 # <minutes> short break duration
+LONG_DURATION=30				 # <minutes> long break duration
+SET_COUNT=3                      # number of pomodoro phases before long break
+
+HEADS_UP=0                       # <seconds> before pomodoro end to raise 'soft warning'; 0 to disable
+HEADS_UP_DURATION=8              # <seconds> to display the 'soft warning' notification before fading it
+SOFT_DISMISS_MMB=0               # { 0, 1 } let middle mouse click temporarily hide the notification
+SOFT_DISMISS_BOUNCEBACK=500      # <seconds> after which to display a soft-dismissed notification again
+# Soft dismiss allows periodic check-in, as LMB/RMB hide notification until 'soft warning' or phase change.
+# All soft timers flush upon phase change.
+
+SHOW_PROGRESS_BAR=1              # { 0, 1 } show a progress bar that fills / depletes based on time
+PROGRESS_BAR_STYLE="continuous"  # { continuous, discrete } continuous or segmented progress bar
+PROGRESS_BAR_UNITS="square"      # { square, circle } shape to use for unit in discrete progress bar
+SHOW_COUNTDOWNS=0                # { 0, 1 } show time remaining in phases
+COUNTDOWN_FORMAT="%M:%S"         # <GNU date format>
+
+AUTO_START="none"                # { none, breaks, all } phase types to start by timer, not user click
+PHASE_SOUND=""                   # path to a sound file to play at phase-end; leave empty to disable
